@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / cache files
+_pycache_/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment directories
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables / API keys
+.env
+
+# VS Code and other editor configs
+.vscode/
+.idea/
+
+# OS-specific system files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+tempCodeRunnerFile.py
+
+# Flask local instance & session data
+instance/
+flask_session/
+
+# Database files (optional/future use)
+*.db
+*.sqlite3
+*.sqlite
+
+# Jupyter notebook checkpoints (not used now)
+.ipynb_checkpoints/
+
+# Packaging / distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Sphinx or other doc tools (optional)
+docs/_build/
+
+# Optional: PDF export output
+*.pdf
