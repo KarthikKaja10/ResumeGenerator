@@ -31,7 +31,6 @@ resume_writer_project/
 ├── .env                   # Environment config for API key (excluded from GitHub)
 ├── .gitignore             # Ignored files for cleanliness and security
 ├── requirements.txt       # Required packages for the project
-├── tempCodeRunnerFile.py  # Scratchpad file from development
 │
 ├── templates/
 │   └── index.html         # Web form UI template
