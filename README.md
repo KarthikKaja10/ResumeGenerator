@@ -1,139 +1,126 @@
-# 🧠 AI Resume Generator (using Gemini API)
+# 📄 AI-Based Resume & Cover Letter Generator using Gemini API
 
-An intelligent resume and cover letter generator built using Flask and Google’s Gemini API. This web application allows users to enter their details and instantly generate a professional resume along with a formal cover letter using Generative AI.
-
----
-
-## 🚀 Features
-
-* ✍ Automatically generates resumes and cover letters based on user input
-* 🧠 Uses Google Gemini 1.5 Flash (via google-generativeai)
-* 🖥 Clean user interface built with Flask, HTML, and CSS
-* 💡 Custom input fields: Name, Education, Experience, Job Role, Skills, Certifications, Achievements
-* 🔒 Secure environment variable handling using .env
+This project is a dynamic resume and cover letter generator built using Flask and Google’s Gemini 1.5 Flash API. By simply entering key personal and professional details, users can quickly receive a well-structured resume and a formal cover letter tailored to their profile.
 
 ---
 
-## 🛠 Tech Stack
+## 🚀 Key Highlights
 
-* *Backend*: Python, Flask
-* *Frontend*: HTML5, CSS3
-* *AI Integration*: Google Gemini 1.5 Flash
-* *Environment Management*: python-dotenv
+- 🤖 Integrates Google Gemini 1.5 Flash for AI-generated content  
+- 📝 Instantly creates resumes and cover letters from user inputs  
+- 📋 Supports fields like Name, Contact Info, Education, University, Experience, Skills, Certifications, and Achievements  
+- 🔐 Environment variables managed using a `.env` file to secure API keys  
+- 💡 Results displayed on the same page with neat formatting, ready to copy
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Technologies Used
 
-text
+- **Backend**: Flask (Python)  
+- **Frontend**: HTML5, CSS3  
+- **AI Integration**: Gemini 1.5 Flash API  
+- **Environment Config**: `python-dotenv`
+
+---
+
+## 📂 Project Directory
+
+```text
 resume_writer_project/
-├── app.py                  # Main Flask application
-├── requirements.txt        # Python dependencies
-├── .gitignore              # Ignored files and folders
-├── .env                    # Contains Gemini API key (not tracked)
+├── app.py                 # Main application script
+├── .env                   # Environment config for API key (excluded from GitHub)
+├── .gitignore             # Ignored files for cleanliness and security
+├── requirements.txt       # Required packages for the project
+├── tempCodeRunnerFile.py  # Scratchpad file from development
 │
 ├── templates/
-│   └── index.html          # Web UI
+│   └── index.html         # Web form UI template
 │
 └── static/
-    └── style.css           # Styling for the app
-
+    └── style.css          # Stylesheet for UI
+```
 
 ---
 
-## 🔧 Setup Instructions
+## ⚙️ How to Set Up
 
-### 1. Clone the repository
+### 1. Clone this repository
 
-bash
-git clone https://github.com/KarthikKaja10/resume-writer-project.git
-cd resume-writer-project
+```bash
+git clone https://github.com/your-username/resume_writer_project.git
+cd resume_writer_project
+```
 
+### 2. Install all dependencies
 
-### 2. Install dependencies
-
-bash
+```bash
 pip install -r requirements.txt
+```
 
+### 3. Set up your API Key
 
-### 3. Add your Gemini API key
+Create a `.env` file in the root folder and include:
 
-Create a .env file in the project root and add:
-
-env
+```env
 GEMINI_API_KEY=your_api_key_here
+```
 
+### 4. Run the app locally
 
-### 4. Run the application
-
-bash
+```bash
 python app.py
+```
 
-
-Visit http://127.0.0.1:5000/ in your browser to use the app.
-
----
-
-## ✅ Sample Use Flow
-
-1. Enter your name, education, experience, job role, skills, certifications, and achievements.
-2. Click *Generate Resume*.
-3. The app displays a personalized resume and cover letter using AI.
+Open your browser and navigate to `http://127.0.0.1:5000/` to use the app.
 
 ---
 
-## 🧪 Testing Strategy
+## ✅ How It Works
 
-The system was tested across a variety of use cases to ensure its reliability, coherence, and user-friendliness. Both manual and functional testing methods were used to verify the following:
-
-* *Input Handling:*
-  Ensured the app could handle varied combinations of user data (e.g., freshers, experienced users, incomplete fields).
-
-* *Content Relevance:*
-  Checked if generated outputs matched user-entered job roles, education, and skills.
-
-* *Form Validation:*
-  Verified that required fields were validated and appropriate messages were shown for missing inputs.
-
-* *User Experience:*
-  Evaluated the interface layout, responsiveness, and clarity of the generated content.
-
-* *Edge Case Testing:*
-  Used unexpected or unusual inputs to ensure the model generates sensible, robust outputs.
+1. Users fill out a simple form with relevant information.  
+2. The form data is passed to Gemini AI, which generates a customized resume and cover letter.  
+3. The formatted output is displayed on the same page, easy to review and copy.
 
 ---
 
-## 🔮 Future Enhancements
+## 🧪 Testing Summary
 
-1. 📄 PDF Export Support
- Allow users to download the resume and cover letter as a well-formatted PDF.
-
-2. 🧾 Profile Saving and Editing
- Let users save their data and make edits without re-entering everything.
-
-3. 🎨 Template Customization
- Enable switching between different resume styles or formats.
-
-4. 🗣 AI Feedback Loop
- Include a feedback form to rate results and improve future generations.
-
-5. 🌐 Multilingual Support
- Add the ability to generate documents in other languages such as Hindi or Spanish.
-
-6. 💼 Job Suggestions
- Recommend job roles based on inputted experience and skills.
+- 🔹 Tested for various user types: fresher, 1+ years, 5+ years of experience  
+- 🔹 Form validations ensure mandatory fields are filled correctly  
+- 🔹 Handled edge cases like blank fields and unrealistic job roles gracefully  
+- 🔹 Verified on different devices and screen sizes for UI consistency  
+- 🔹 Ensured Gemini-generated content aligns with user input and role
 
 ---
 
-## 👨‍💻 Author
+## 📊 Test Observations
 
-*KAJA KARTHIK*
-B.Tech Student | AI Enthusiast
-Email: [karthik.23bce7860@vitapstudent.ac.in](mailto:karthik.23bce7860@vitapstudent.ac.in)
-College: VELLORE INSTITUTE OF TECHNOLOGY, AMARAVATI
+- ⚡ Output time: ~2-3 seconds  
+- 📌 Content: Relevant and grammatically correct resumes and cover letters  
+- 🧱 Stability: No crashes or form failures observed during testing
+
+---
+
+## 🌟 Planned Enhancements
+
+1. **Download as PDF** feature for resume & cover letter  
+2. **User Account System** to save multiple versions  
+3. **More Layout Options** for resume themes  
+4. **Smart Recommendations** for job roles and skills  
+5. **Multi-language Output** support  
+6. **External API integration** for job listings
+
+---
+
+## 👨‍💻 Developed By
+
+**Kaja Karthik**  
+B.Tech in Computer Science   
+📧 karthik.23bce7860@vitapstudent.ac.in  
+🎓 Vellore Institute of Technology, Amaravati
 
 ---
 
 ## 📄 License
 
-This project is created for academic and educational purposes only.
+This project is intended for academic and personal learning use. Please ensure to verify and customize AI-generated content before using it in real-world applications.
