@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>AI Resume Generator</h1>
+
+    <form method="POST">
+        <label>Job Role:</label>
+        <input type="text" name="job_role" list="jobroles" placeholder="e.g. Frontend Developer" required>
+        <datalist id="jobroles">
+            <option value="Frontend Developer">
+            <option value="Python Developer">
+            <option value="ML Engineer">
+            <option value="Cybersecurity Analyst">
+            <option value="Business Analyst">
+        </datalist>
+
+        <label>Work Experience:</label>
+        <select name="experience" required>
+            <option value="" disabled selected>Select Experience</option>
+            {% for exp in experience_options %}
+            <option value="{{ exp }}">{{ exp }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Education:</label>
+        <select name="education" required>
+            <option value="" disabled selected>Select Education</option>
+            {% for edu in education_options %}
+            <option value="{{ edu }}">{{ edu }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Skills:</label>
+        <input type="text" name="skills" placeholder="e.g. Python, HTML, SQL, Excel" required>
+
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Your Full Name" required>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    {% if show_output %}
+    <div class="output">
+        <h2>📄 Resume</h2>
+        <pre>{{ resume }}</pre>
+
+        {% if cover_letter %}
+        <h2>✉️ Cover Letter</h2>
+        <pre>{{ cover_letter }}</pre>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
